@@ -10,7 +10,7 @@
 #define HEALTH_POINT 4
 
 int turn_status = 0; //0 = player, 1 = opponant
- 
+
 
 typedef struct {
     int rank; // 0~12 (2~Ace)
@@ -110,7 +110,7 @@ int main() {
         print_hand(player_hand);
         draw_cards(deck, &deck_index, player_hand);
 
-        printf("교체 후 플레이어의 카드: ");
+        printf("\n교체 후 플레이어의 카드: ");
         print_hand(player_hand);
 
         int choose;
@@ -144,7 +144,7 @@ int main() {
                     printf("내가 총을 자신에게 겨눠서 쐈고, 실탄이었습니다.\n");
                     printf("내 HP -1\n");
                     player_hp -= 1;
-                    
+
                 }
             }
             else if (player_score < dealer_score) {
@@ -164,7 +164,7 @@ int main() {
                 }
             }
             else {
-                printf("무승부!(에러 방지용, 원래는 없어용)\n");
+                printf("무승부!(에러 방지용 - 모양에 따른 우열이 아직 구현되지 않아서 나옴, 원래는 없어용)_made by quack\n");
             }
         }
         else {
@@ -209,8 +209,8 @@ int main() {
             }
         }
         printf("\n\n");
-        printf("Your Hp : %d\n",player_hp);
-        printf("Opponent Hp : %d\n\n",opponent_hp);
+        printf("Your Hp : %d\n", player_hp);
+        printf("Opponent Hp : %d\n\n", opponent_hp);
 
 
         if (player_hp <= 0) {
@@ -221,7 +221,7 @@ int main() {
             printf("YOU WIN!");
             break;
         }
-        
+
     } //while(1)
     return 0;
 }
