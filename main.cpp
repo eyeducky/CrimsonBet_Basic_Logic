@@ -14,7 +14,7 @@ int turn_status = 0; //0 = player, 1 = opponant
 
 typedef struct {
     int rank; // 0~12 (2~Ace)
-    int suit; // 0~3 (♠, ♥, ♦, ♣)
+    int suit; // 0~3 (스페이드, 하트, 다이아, 클로버)
 } Card;
 
 void shuffle_deck(Card* deck) {
